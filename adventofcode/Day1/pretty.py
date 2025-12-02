@@ -20,11 +20,3 @@ def checkForZero(position, password):
         password += 1
     
     return password
-
-def outOfRange(pos):
-    if pos > 99:
-        pos = 0
-    elif pos < 0:
-        pos = 99
-
-    return pos
