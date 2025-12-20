@@ -1,11 +1,11 @@
 def twoSum(nums, target):
-        hmap = {}
-        
-        for i in range(len(nums)):
-            diff = target - nums[i]
-            if diff in hmap:
-                return [i, hmap[diff]]
-            hmap[nums[i]] = i
+    hmap = {}
+    
+    for i in range(len(nums)):
+        diff = target - nums[i]
+        if diff in hmap:
+            return [i, hmap[diff]]
+        hmap[nums[i]] = i
         
                 
 twoSum([3,2,4], 6)
