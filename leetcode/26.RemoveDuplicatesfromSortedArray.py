@@ -1,16 +1,24 @@
 def removeDuplicates(nums):
-    k = 0
+    if not nums:
+        return 0
+    
+    duplicates = 0
+    length = len(nums)
+    pl = 0
 
-    for i in range(1, len(nums)):
-        if nums[i] != nums[i - 1]:
-            nums[k] = nums[i]
-            k += 1
+    for pr in range(1, length):
+        if nums[pl] == nums[pr]:
+            duplicates += 1
+        else:
+            nums[pl + 1] = nums[pr]  
+            pl += 1
 
-    k = len(nums) - k
+    answer = length - duplicates
 
-    print(k)
-    return k
+    return answer
 
+    
+    
 
 removeDuplicates([1,1,2])
 removeDuplicates([0,0,1,1,1,2,2,3,3,4])
